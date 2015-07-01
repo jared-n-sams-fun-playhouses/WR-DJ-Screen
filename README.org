@@ -3,6 +3,8 @@
 
 * Web Radio Proto
 
+[[http://jared-n-sams-fun-playhouses.github.io/web-radio-proto/][click here for gh-pages link]]
+
 The idea is to have a way to provide an easy means of creating a radio show, using what web technologies that are available.
 
 This may move to a more desktop oriented package if we find the web browser not suitable enough. If so, probably use Qt with C++, java with javafx, nodejs, etc.
