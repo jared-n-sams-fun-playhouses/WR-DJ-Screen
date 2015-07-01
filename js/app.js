@@ -54,8 +54,8 @@ window.addEventListener('DOMContentLoaded', function() {
         // We're using textContent because inserting content from external sources into your page using innerHTML can be dangerous.
         // https://developer.mozilla.org/Web/API/Element.innerHTML#Security_considerations
 
-        var message = document.getElementById('message');
-        message.textContent = translate('message');
+        var title = document.getElementById('title');
+        title.textContent = translate('app_title');
 
         setup();
     }

@@ -1,34 +1,21 @@
-* Privileged empty app
+#+Title: Web Radio Prototype
+#+Author: Jared Smith, Sam Beveridge
 
-This is a privileged empty app template that provides you with a
-barebones structure for you to build your app.
+* Web Radio Proto
+
+The idea is to have a way to provide an easy means of creating a radio show, using what web technologies that are available.
+
+This may move to a more desktop oriented package if we find the web browser not suitable enough. If so, probably use Qt with C++, java with javafx, nodejs, etc.
+
+This might work in mobile space too, but won't pursue until the backend logistics are working.
+
+* Motor Templates
 
 This is part of the [[https://github.com/mozilla/mortar/][mortar]]
 template collection for building
 [[https://developer.mozilla.org/Apps][Open Web Apps]].
 
-** Obtaining
-
-There are a few ways to get this template:
-
-If you use [[http://www.git-scm.com/][Git]]:
-
-#+BEGIN_EXAMPLE
-    git clone https://github.com/mozilla/mortar-privileged-empty-app.git
-#+END_EXAMPLE
-
-Or download the latest version in this
-[[https://github.com/mozilla/mortar-privileged-empty-app/archive/master.zip][ZIP
-file]].
-
-** Usage
-
-Import the app into the
-[[https://developer.mozilla.org/Firefox_OS/Using_the_App_Manager][App
-Manager]]. Then you can run it in the simulator, or in a Firefox OS
-device.
-
-** Code walkthrough
+** Project Walkthrough
 
 The =manifest.webapp= file contains metadata about the app, such as its
 name, description, icon and required permissions for running under
