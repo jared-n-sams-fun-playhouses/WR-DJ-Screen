@@ -1,7 +1,9 @@
 #+Title: Web Radio Prototype
 #+Author: Jared Smith, Sam Beveridge
 
-* Web Radio Proto
+* About
+
+[[https://jared-n-sams-fun-playhouses.github.io/web-radio-proto][Click here for demo]]
 
 The idea is to have a way to provide an easy means of creating a radio show, using what web technologies that are available.
 
