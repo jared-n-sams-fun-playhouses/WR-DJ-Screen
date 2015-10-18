@@ -3,7 +3,7 @@
 
 * About
 
-[[https://jared-n-sams-fun-playhouses.github.io/web-radio-proto][Click here for demo]]
+[[https://jared-n-sams-fun-playhouses.github.io/WR-DJ-Screen][Click here for demo]]
 
 The idea is to have a way to provide an easy means of creating a radio show, using what web technologies that are available.
 
