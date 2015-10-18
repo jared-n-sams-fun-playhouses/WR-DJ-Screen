@@ -14,7 +14,11 @@
     "url": "http://jaredsmithjrod.ca"
   },
   "type": "privileged",
-  "permissions": {},
+  "permissions": {
+    "audio-capture": {
+      "description": "Required to capture audio using getUserMedia()"
+    }
+  },
   "installs_allowed_from": [
     "*"
   ],
