@@ -49,3 +49,7 @@ function setAudio() {
 		console.log('getUserMedia error: ' + error.code + ' .');
 	});
 }
+
+function setConnection() {
+	
+}
