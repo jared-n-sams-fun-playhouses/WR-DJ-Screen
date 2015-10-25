@@ -3,25 +3,25 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	var translate = navigator.mozL10n.get;
 
-	navigator.mozL10n.once(start);
-
-	function start() {
+	navigator.mozL10n.once(function() {
 		var title = document.getElementById('title');
 		title.textContent = translate('app_title');
+	});
 
-		setup();
+	var server = new WebSocket("ws://localhost:10101/echo");
+
+	server.onopen = function() {
+		server.send("Connection init from DJ Screen.");
 	}
 
-	function setup() {
-		setAudio();
-	}
+	setAudio(server);
 
 });
 
-function setAudio() {
+function setAudio(server) {
 	window.AudioContext = (window.AudioContext || window.webkitAudioContext);
 
-	navigator.getUserMedia =   (navigator.getUserMedia || 
+	navigator.getUserMedia =   (navigator.getUserMedia ||
 								navigator.webkitGetUserMedia ||
 								navigator.mozGetUserMedia ||
 								navigator.msGetUserMedia);
@@ -31,25 +31,15 @@ function setAudio() {
 					window.mozURL ||
 					window.msURL);
 
-	var audio = document.querySelector('audio');
-
 	var context = new AudioContext();
 
 	navigator.getUserMedia({audio:true}, function(stream) {
 
-		var microphone = context.createMediaStreamSource(stream);
-		var filter = context.createBiquadFilter();
+		window.source = context.createMediaStreamSource(stream);
 
-		microphone.connect(filter);
-		filter.connect(context.destination);
+		source.connect(context.destination);
 
-		audio.src = window.URL.createObjectURL(stream);
-		
 	}, 	function (error) {
 		console.log('getUserMedia error: ' + error.code + ' .');
 	});
-}
-
-function setConnection() {
-	
 }
